@@ -73,8 +73,10 @@
             </div>
             <h4 class="m-0 pe-lg-5 d-none d-lg-block">
                 <i class=" text-primary me-3 small" style="display: inline-block; vertical-align: middle;"></i>
-                <span style="display: inline-block; vertical-align: middle;">MC: 930197</span>
-                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;">DOT: 2789415</span>
+                <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
+                    style="display: inline-block; vertical-align: middle;">MC: 930197</a>
+                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;"><a
+                        href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx">DOT: 2789415</a></span>
             </h4>
         </div>
     </nav>

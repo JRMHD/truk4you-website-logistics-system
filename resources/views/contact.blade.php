@@ -73,8 +73,10 @@
             </div>
             <h4 class="m-0 pe-lg-5 d-none d-lg-block">
                 <i class=" text-primary me-3 small" style="display: inline-block; vertical-align: middle;"></i>
-                <span style="display: inline-block; vertical-align: middle;">MC: 930197</span>
-                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;">DOT: 2789415</span>
+                <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
+                    style="display: inline-block; vertical-align: middle;">MC: 930197</a>
+                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;"><a
+                        href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx">DOT: 2789415</a></span>
             </h4>
         </div>
     </nav>
@@ -103,10 +105,9 @@
             <div class="row g-5 mx-lg-0">
                 <div class="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">Get In Touch</h6>
-                    <h1 class="mb-4">Contact For Any Query</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form
-                        with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're
-                        done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                    <h1 class="mb-4">Contact Us</h1>
+                    <p class="mb-4">Have a question or need assistance? Feel free to contact us. You can also give us
+                        a call at <a href="tel:+13039447371">+1 303-944-7371</a>.</p>
                     <div class="bg-light p-4">
                         <form>
                             <div class="row g-3">
@@ -144,6 +145,7 @@
                         </form>
                     </div>
                 </div>
+
                 <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
                     <div class="position-relative h-100">
                         <iframe

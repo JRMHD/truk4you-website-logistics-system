@@ -78,9 +78,12 @@
             </div>
             <h4 class="m-0 pe-lg-5 d-none d-lg-block">
                 <i class=" text-primary me-3 small" style="display: inline-block; vertical-align: middle;"></i>
-                <span style="display: inline-block; vertical-align: middle;">MC: 930197</span>
-                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;">DOT: 2789415</span>
+                <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
+                    style="display: inline-block; vertical-align: middle;">MC: 930197</a>
+                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;"><a
+                        href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx">DOT: 2789415</a></span>
             </h4>
+
 
 
 
@@ -110,17 +113,18 @@
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
                                     start to finish. Contact us today to get started.</p>
                                 <div class="d-flex flex-column flex-md-row">
-                                    <a href="#"
+                                    <a href="{{ route('quote') }}"
                                         class="btn btn-primary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
                                         Quote Request</a>
-                                    <a href="#"
+                                    <a href="{{ route('employeeApplication') }}"
                                         class="btn btn-secondary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
                                         Application</a>
-                                    <a href="#"
+                                    <a href="{{ route('dispatchpage') }}"
                                         class="btn btn-success py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Dispatch
                                         Page</a>
-                                    <a href="#"
-                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Admin Login</a>
+                                    <a href="{{ route('Adminlogin') }}"
+                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Admin
+                                        Login</a>
                                 </div>
 
 
@@ -145,19 +149,19 @@
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience a new level of efficiency and
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
                                     start to finish. Contact us today to get started.</p>
-                                <div class="d-flex">
-                                    <a href="#"
-                                        class="btn btn-primary py-2 px-4 me-3 animated slideInLeft">Learn
-                                        More</a>
-                                    <a href="#"
-                                        class="btn btn-secondary py-2 px-4 me-3 animated slideInLeft">Request a
-                                        Quote</a>
-                                    <a href="#"
-                                        class="btn btn-success py-2 px-4 me-3 animated slideInLeft">Button
-                                        3</a>
-                                    <a href="#"
-                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft">Button
-                                        4</a>
+                                <div class="d-flex flex-column flex-md-row">
+                                    <a href="{{ route('quote') }}"
+                                        class="btn btn-primary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
+                                        Quote Request</a>
+                                    <a href="{{ route('employeeApplication') }}"
+                                        class="btn btn-secondary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
+                                        Application</a>
+                                    <a href="{{ route('dispatchpage') }}"
+                                        class="btn btn-success py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Dispatch
+                                        Page</a>
+                                    <a href="{{ route('Adminlogin') }}"
+                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Admin
+                                        Login</a>
                                 </div>
 
                             </div>

@@ -22,3 +22,15 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::get('/quote', function () {
+    return view('quote');
+})->name('quote');
+Route::get('/employeeApplication', function () {
+    return view('employeeApplication');
+})->name('employeeApplication');
+Route::get('/dispatchpage', function () {
+    return view('dispatchpage');
+})->name('dispatchpage');
+Route::get('/Adminlogin', function () {
+    return view('Adminlogin');
+})->name('Adminlogin');
