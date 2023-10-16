@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
+
+    <!-- Or for PNG format -->
+    <link rel="icon" type="image/png" href="/favicon.png">
     <title>Broker/Dispatch Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Set viewport meta tag for responsiveness -->

@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
+
+    <!-- Or for PNG format -->
+    <link rel="icon" type="image/png" href="/favicon.png">
     <title>Employee Application Form</title>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -84,8 +88,7 @@
                     <label class="form-check-label" for="ownerOperator">Owner Operator</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="operatorType" id="driver"
-                        value="driver">
+                    <input class="form-check-input" type="radio" name="operatorType" id="driver" value="driver">
                     <label class="form-check-label" for="driver">Driver</label>
                 </div>
             </div>

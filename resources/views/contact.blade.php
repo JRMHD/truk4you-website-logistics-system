@@ -149,7 +149,7 @@
                 <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
                     <div class="position-relative h-100">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57026478.06182958!2d-138.9769081640621!3d29.26412031300415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2ske!4v1697139912363!5m2!1sen!2ske"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93856.57383597264!2d-89.09209469777515!3d42.68216247044957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880617924d2239db%3A0xbfbb4761fcdbec0!2sJanesville%2C%20WI%2C%20USA!5e0!3m2!1sen!2ske!4v1697454036612!5m2!1sen!2ske"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
