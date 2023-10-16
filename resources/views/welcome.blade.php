@@ -97,78 +97,83 @@
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative mb-5">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/truk 1.png" alt="">
-
+                <img class="img-fluid" src="img/truk 5.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
                         <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics
+                            <div class="col-12 col-md-8 col-lg-6">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown typing-demo">Transport &
+                                    Logistics
                                     Simplified</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Solution For Your <span
+                                <h1 class="display-4 text-white animated slideInDown mb-4 ">#1 Solution For Your <span
                                         class="text-primary">Logistics Needs</span></h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience a new level of efficiency and
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
                                     start to finish. Contact us today to get started.</p>
-                                <div class="d-flex flex-column flex-md-row">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
                                     <a href="{{ route('quote') }}"
-                                        class="btn btn-primary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
-                                        Quote Request</a>
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Get
+                                        a Quote</a>
                                     <a href="{{ route('employeeApplication') }}"
-                                        class="btn btn-secondary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
-                                        Application</a>
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Apply
+                                        Now</a>
                                     <a href="{{ route('dispatchpage') }}"
-                                        class="btn btn-success py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Dispatch
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Dispatch
                                         Page</a>
                                     <a href="{{ route('Adminlogin') }}"
-                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Admin
+                                        class="btn btn-primary py-2 px-3 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Admin
                                         Login</a>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/truk 2.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, .5);">
                     <div class="container">
                         <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transport & Logistics
+                            <div class="col-12 col-md-8 col-lg-6">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown typing-demo">Transport &
+                                    Logistics
                                     Simplified</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Solution For Your <span
+                                <h1 class="display-4 text-white animated slideInDown mb-4">#1 Solution For Your <span
                                         class="text-primary">Logistics Needs</span></h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience a new level of efficiency and
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
                                     start to finish. Contact us today to get started.</p>
-                                <div class="d-flex flex-column flex-md-row">
+                                <div class="d-flex flex-column flex-md-row align-items-center">
                                     <a href="{{ route('quote') }}"
-                                        class="btn btn-primary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
-                                        Quote Request</a>
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Get
+                                        a Quote</a>
                                     <a href="{{ route('employeeApplication') }}"
-                                        class="btn btn-secondary py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Submit
-                                        Application</a>
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Apply
+                                        Now</a>
                                     <a href="{{ route('dispatchpage') }}"
-                                        class="btn btn-success py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Dispatch
+                                        class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Dispatch
                                         Page</a>
                                     <a href="{{ route('Adminlogin') }}"
-                                        class="btn btn-danger py-2 px-4 me-3 animated slideInLeft mb-2 mb-md-0">Admin
+                                        class="btn btn-primary py-2 px-3 animated slideInLeft"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Admin
                                         Login</a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- Carousel End -->
 
@@ -191,17 +196,19 @@
                             started.</p>
                         <div class="row g-4 mb-5">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <i class="fa fa-globe fa-3x text-primary mb-3"></i>
-                                <h5>Global Coverage</h5>
-                                <p class="m-0">We provide global coverage to meet your logistics needs.</p>
+                                <i class="fa fa-map-marker fa-3x text-primary mb-3"></i>
+                                <h5>Nationwide Service</h5>
+                                <p class="m-0">We offer nationwide logistics solutions to meet your transportation
+                                    needs across the USA.</p>
                             </div>
+
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
                                 <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
                                 <h5>On Time Delivery</h5>
                                 <p class="m-0">We pride ourselves on delivering your goods on time, every time.</p>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-primary py-3 px-5">Learn More</a>
+                        <a href="{{ route('contact') }}" class="btn btn-primary py-3 px-5">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -284,6 +291,8 @@
 
 
         <!-- JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="lib/wow/wow.min.js"></script>

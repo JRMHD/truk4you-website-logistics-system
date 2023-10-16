@@ -2,9 +2,14 @@
 <html>
 
 <head>
+    <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
+
+    <!-- Or for PNG format -->
+    <link rel="icon" type="image/png" href="/favicon.png">
     <title>Freight Hauling Quote Request</title>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -22,8 +27,10 @@
 
             <div class="form-group">
                 <label for="pickupDateTime">Pickup Date/Time:</label>
-                <input type="datetime-local" class="form-control" id="pickupDateTime" name="pickupDateTime" required>
+                <input type="datetime-local" class="form-control" id="pickupDateTime" name="pickupDateTime" required
+                    min="YYYY-MM-DDT08:00" max="YYYY-MM-DDT14:00">
             </div>
+
 
             <div class="form-group">
                 <label for="deliveryLocation">Delivery Location:</label>

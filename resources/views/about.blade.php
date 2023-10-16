@@ -117,9 +117,10 @@
                         started.</p>
                     <div class="row g-4 mb-5">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                            <i class="fa fa-globe fa-3x text-primary mb-3"></i>
-                            <h5>Global Coverage</h5>
-                            <p class="m-0">We provide global coverage to meet your logistics needs.</p>
+                            <i class="fa fa-map-marker fa-3x text-primary mb-3"></i>
+                            <h5>Nationwide Service</h5>
+                            <p class="m-0">We offer nationwide logistics solutions to meet your transportation
+                                needs across the USA.</p>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
                             <i class="fa fa-shipping-fast fa-3x text-primary mb-3"></i>
@@ -127,7 +128,7 @@
                             <p class="m-0">We pride ourselves on delivering your goods on time, every time.</p>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary py-3 px-5">Learn More</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary py-3 px-5">Learn More</a>
                 </div>
             </div>
         </div>
