@@ -50,9 +50,9 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a href="{{ url('/') }}" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
-            <img src="img/truk4you logo.jpeg" alt="TRUK4YOU Logo" width="200" height="76">
-            {{-- <h2 class="mb-2 text-white">TRUK4YOU</h2> --}}
+        <a href="{{ url('/') }}" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5"
+            style="color: white; font-weight: bold;">
+            L&K TRUCKING LLC
         </a>
 
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -62,7 +62,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                 <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
-                {{-- <a href="service.html" class="nav-item nav-link">Services</a> --}}
+                <a href="{{ url('/') }}" class="nav-item nav-link">Hotshot</a>
                 {{-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-up m-0">
@@ -76,13 +76,13 @@
                 </div> --}}
                 <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block">
-                <i class=" text-primary me-3 small" style="display: inline-block; vertical-align: middle;"></i>
+            <div style="display: flex; align-items: center;">
+                <i class=" text-primary me-3 small" style="font-size: 0.8em;"></i>
+                <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx" style="font-size: 0.8em;">MC: 930197</a>
                 <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
-                    style="display: inline-block; vertical-align: middle;">MC: 930197</a>
-                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;"><a
-                        href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx">DOT: 2789415</a></span>
-            </h4>
+                    style="font-size: 0.8em; margin-left: 10px;">DOT: 2789415</a>
+            </div>
+
 
 
 
@@ -291,6 +291,7 @@
 
 
         <!-- JavaScript Libraries -->
+        
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

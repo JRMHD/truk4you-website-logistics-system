@@ -15,7 +15,7 @@
 <body>
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
-            <h1>Freight Hauling Quote Request</h1>
+            <h1>Freight Quote Request</h1>
             <a href="{{ url('/') }}" class="btn btn-primary">Back to Home</a>
         </div>
 

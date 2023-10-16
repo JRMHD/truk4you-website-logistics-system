@@ -46,10 +46,11 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
-        <a href="{{ url('/') }}" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
-            <img src="img/truk4you logo.jpeg" alt="TRUK4YOU Logo" width="200" height="76">
-            {{-- <h2 class="mb-2 text-white">TRUK4YOU</h2> --}}
+        <a href="{{ url('/') }}" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5"
+            style="color: white; font-weight: bold;">
+            L&K TRUCKING LLC
         </a>
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -71,13 +72,12 @@
                 </div> --}}
                 <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
-            <h4 class="m-0 pe-lg-5 d-none d-lg-block">
-                <i class=" text-primary me-3 small" style="display: inline-block; vertical-align: middle;"></i>
+            <div style="display: flex; align-items: center;">
+                <i class=" text-primary me-3 small" style="font-size: 0.8em;"></i>
+                <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx" style="font-size: 0.8em;">MC: 930197</a>
                 <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
-                    style="display: inline-block; vertical-align: middle;">MC: 930197</a>
-                <span style="display: inline-block; vertical-align: middle; margin-left: 10px;"><a
-                        href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx">DOT: 2789415</a></span>
-            </h4>
+                    style="font-size: 0.8em; margin-left: 10px;">DOT: 2789415</a>
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->
