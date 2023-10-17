@@ -34,3 +34,6 @@ Route::get('/dispatchpage', function () {
 Route::get('/Adminlogin', function () {
     return view('Adminlogin');
 })->name('Adminlogin');
+Route::get('/hotshot', function () {
+    return view('hotshot');
+})->name('hotshot');

@@ -62,7 +62,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                 <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
-                <a href="{{ url('/') }}" class="nav-item nav-link">Hotshot</a>
+                <a href="{{ route('hotshot') }}" class="nav-item nav-link">Hotshot</a>
                 {{-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu fade-up m-0">
@@ -106,15 +106,16 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown typing-demo">Transport &
                                     Logistics
                                     Simplified</h5>
-                                <h1 class="display-4 text-white animated slideInDown mb-4 ">#1 Solution For Your <span
+                                <h1 class="display-4 text-white animated slideInDown mb-4 ">Solutions For Your <span
                                         class="text-primary">Logistics Needs</span></h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience a new level of efficiency and
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
-                                    start to finish. Contact us today to get started.</p>
+                                    start to finish. With access to multiple equipment types, we can provide the right
+                                    solution for your freight-handling needs. Contact us today to get started.</p>
                                 <div class="d-flex flex-column flex-md-row align-items-center">
                                     <a href="{{ route('quote') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
-                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Get
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Request
                                         a Quote</a>
                                     <a href="{{ route('employeeApplication') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
@@ -122,12 +123,12 @@
                                         Now</a>
                                     <a href="{{ route('dispatchpage') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
-                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Dispatch
-                                        Page</a>
-                                    <a href="{{ route('Adminlogin') }}"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">
+                                        Shippers </a>
+                                    {{-- <a href="{{ route('Adminlogin') }}"
                                         class="btn btn-primary py-2 px-3 animated slideInLeft"
                                         style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Admin
-                                        Login</a>
+                                        Login</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -145,15 +146,16 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown typing-demo">Transport &
                                     Logistics
                                     Simplified</h5>
-                                <h1 class="display-4 text-white animated slideInDown mb-4">#1 Solution For Your <span
+                                <h1 class="display-4 text-white animated slideInDown mb-4 ">Solutions For Your <span
                                         class="text-primary">Logistics Needs</span></h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience a new level of efficiency and
                                     reliability in transportation. Our dedicated team ensures a seamless experience from
-                                    start to finish. Contact us today to get started.</p>
+                                    start to finish. With access to multiple equipment types, we can provide the right
+                                    solution for your freight-handling needs. Contact us today to get started.</p>
                                 <div class="d-flex flex-column flex-md-row align-items-center">
                                     <a href="{{ route('quote') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
-                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Get
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Request
                                         a Quote</a>
                                     <a href="{{ route('employeeApplication') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
@@ -161,12 +163,12 @@
                                         Now</a>
                                     <a href="{{ route('dispatchpage') }}"
                                         class="btn btn-primary py-2 px-3 mb-2 me-md-2 animated slideInLeft"
-                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Dispatch
-                                        Page</a>
-                                    <a href="{{ route('Adminlogin') }}"
+                                        style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">
+                                        Shippers </a>
+                                    {{-- <a href="{{ route('Adminlogin') }}"
                                         class="btn btn-primary py-2 px-3 animated slideInLeft"
                                         style="background-color: #007bff; border-color: #007bff; border-radius: 5px; font-size: 14px;">Admin
-                                        Login</a>
+                                        Login</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -214,15 +216,6 @@
             </div>
         </div>
         <!-- About End -->
-
-
-
-
-
-
-
-
-
 
 
         <!-- Quote Start -->
@@ -282,8 +275,8 @@
         <!-- Quote End -->
 
 
-        @include('footer')
 
+        @include('footer')
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i
@@ -291,7 +284,7 @@
 
 
         <!-- JavaScript Libraries -->
-        
+
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

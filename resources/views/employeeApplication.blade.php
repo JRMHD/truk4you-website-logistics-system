@@ -17,7 +17,6 @@
 
     <div class="container mt-5">
         <h1 class="mb-4">Employee Application Form</h1>
-
         <form action="submit.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
@@ -96,8 +95,11 @@
             <button type="submit" class="btn btn-primary">Submit</button>
 
             <!-- Add a button to go back to the home page -->
-            <a href="{{ url('/') }}" class="btn btn-secondary">Back to Home</a>
+            {{-- <a href="{{ url('/') }}" class="btn btn-secondary">Back to Home</a> --}}
         </form>
+        <!-- Add "Back to Home" button at the top right and style it blue -->
+        <a href="{{ url('/') }}" class="btn btn-primary"
+            style="position: absolute; top: 10px; right: 10px;">Back to Home</a>
     </div>
 
     <!-- Add Bootstrap JS and jQuery -->
