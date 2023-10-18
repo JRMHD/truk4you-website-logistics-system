@@ -107,8 +107,9 @@
                 <div class="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">Get In Touch</h6>
                     <h1 class="mb-4">Contact Us</h1>
-                    <p class="mb-4">Have a question or need assistance? Feel free to contact us. You can also give us
-                        a call at <a href="tel:+13039447371">+1 303-944-7371</a>.</p>
+                    <p class="mb-4">Have a question or need assistance? Feel free to contact us. You can reach out to
+                        us via email at <a href="mailto:letsroll@truk4you.com" class="btn btn-link">EMAILS US</a> or
+                        give us a call at <a href="tel:+13039447371" class="btn btn-link">CALL US</a>.</p>
                     <div class="bg-light p-4">
                         <form>
                             <div class="row g-3">
@@ -159,6 +160,7 @@
         </div>
     </div>
     <!-- Contact End -->
+
     @include('footer')
 
 

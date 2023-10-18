@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Route::post('/submit', 'FormDataController@store')->name('submit');
+Route::get('/quote', 'FormDataController@create')->name('quote');
+
+
+
 
 /*
 |--------------------------------------------------------------------------
