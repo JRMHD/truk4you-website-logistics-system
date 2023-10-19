@@ -1,8 +1,14 @@
 <?php
 
+use App\Http\Controllers\FormDataController;
 use Illuminate\Support\Facades\Route;
-Route::post('/submit', 'FormDataController@store')->name('submit');
+
+// Route::post('/submit', 'FormDataController@store')->name('submit');
+Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
 Route::get('/quote', 'FormDataController@create')->name('quote');
+
+Route::post('/submit-employee-application', 'EmployeeApplicationController@submitForm')->name('employee-application.submit');
+Route::post('/employee-application-form', 'EmployeeApplicationController@submitForm');
 
 
 
@@ -11,7 +17,7 @@ Route::get('/quote', 'FormDataController@create')->name('quote');
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
+|run now
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
@@ -42,3 +48,5 @@ Route::get('/Adminlogin', function () {
 Route::get('/hotshot', function () {
     return view('hotshot');
 })->name('hotshot');
+
+

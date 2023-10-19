@@ -12,24 +12,24 @@ return new class extends Migration
      * @return void
      */
     public function up()
-{
-    Schema::create('form_data', function (Blueprint $table) {
-        $table->id();
-        $table->string('pickupLocation');
-        $table->datetime('pickupDateTime');
-        $table->string('deliveryLocation');
-        $table->datetime('deliveryDateTime');
-        $table->string('equipmentType');
-        $table->string('loadType');
-        $table->string('loadDimensions');
-        $table->text('commodityDescription');
-        $table->string('contactName');
-        $table->string('contactPhone');
-        $table->string('contactEmail');
-        $table->string('loadDocPath')->nullable();
-        $table->timestamps();
-    });
-}
+    {
+        Schema::create('form_data', function (Blueprint $table) {
+            $table->id();
+            $table->string('pickupLocation');
+            $table->datetime('pickupDateTime');
+            $table->string('deliveryLocation');
+            $table->datetime('deliveryDateTime');
+            $table->string('equipmentType');
+            $table->string('loadType');
+            $table->string('loadDimensions');
+            $table->text('commodityDescription');
+            $table->string('contactName');
+            $table->string('contactPhone');
+            $table->string('contactEmail');
+            $table->string('loadDocPath')->nullable();
+            $table->timestamps();
+        });
+    }
 
 
     /**
