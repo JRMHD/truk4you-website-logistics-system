@@ -95,6 +95,11 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
 
             <!-- Add a button to go back to the home page -->
             {{-- <a href="{{ url('/') }}" class="btn btn-secondary">Back to Home</a> --}}

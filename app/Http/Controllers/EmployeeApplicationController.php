@@ -25,6 +25,20 @@ class EmployeeApplicationController extends Controller
         // Set form data
         $employeeApplication->name = $request->input('name');
         $employeeApplication->license = $request->input('license');
+        $employeeApplication->expiration = $request->input('expiration');
+        $employeeApplication->endorsements = $request->input('endorsements');
+
+        $employeeApplication->backgroundCheck = $request->input('backgroundCheck');
+        $employeeApplication->workSchedule = $request->input('workSchedule');
+        $employeeApplication->address = $request->input('address');
+        $employeeApplication->phone = $request->input('phone');
+        $employeeApplication->email = $request->input('email');
+        $employeeApplication->experience = $request->input('experience');
+        // $employeeApplication->resume = $request->input('resume');
+        // $employeeApplication->form-check = $request->input('form-check');
+
+        
+        
         // Add more fields...
 
         // If a file was uploaded, store it and set the file path in the model
@@ -37,6 +51,6 @@ class EmployeeApplicationController extends Controller
         // Save the data in the database
         $employeeApplication->save();
 
-        return redirect()->route('employee-application')->with('success', 'Application Submitted Successfully');
+        return redirect()->route('employeeApplication')->with('success', 'Application Submitted Successfully');
     }
 }

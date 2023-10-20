@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeApplicationController;
 use App\Http\Controllers\FormDataController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,8 +8,11 @@ use Illuminate\Support\Facades\Route;
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
 Route::get('/quote', 'FormDataController@create')->name('quote');
 
-Route::post('/submit-employee-application', 'EmployeeApplicationController@submitForm')->name('employee-application.submit');
-Route::post('/employee-application-form', 'EmployeeApplicationController@submitForm');
+
+// Route::post('/submit-employee-application', 'EmployeeApplicationController@submitForm')->name('employee-application.submit');
+// Route::post('/employee-application-form', 'EmployeeApplicationController@submitForm');
+Route::post('/submit-employee-application', [EmployeeApplicationController::class, 'submitForm'])->name('employee-application.submit');
+Route::post('/employee-application-form', [EmployeeApplicationController::class, 'submitForm'])->name('submitForm');
 
 
 
@@ -49,4 +53,6 @@ Route::get('/hotshot', function () {
     return view('hotshot');
 })->name('hotshot');
 
+Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
