@@ -14,6 +14,9 @@ Route::get('/quote', 'FormDataController@create')->name('quote');
 Route::post('/submit-employee-application', [EmployeeApplicationController::class, 'submitForm'])->name('employee-application.submit');
 Route::post('/employee-application-form', [EmployeeApplicationController::class, 'submitForm'])->name('submitForm');
 
+// Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork');
+Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
+
 
 
 
@@ -55,4 +58,7 @@ Route::get('/hotshot', function () {
 
 Auth::routes();
 
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
