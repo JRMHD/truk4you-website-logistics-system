@@ -17,6 +17,8 @@ Route::post('/employee-application-form', [EmployeeApplicationController::class,
 // Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork');
 Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
 
+Route::get('/quote-form', 'QuoteController@showForm');
+Route::post('/submit-quote', 'QuoteController@store')->name('quote.store');
 
 
 
@@ -60,5 +62,3 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
