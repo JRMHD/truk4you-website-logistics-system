@@ -17,7 +17,7 @@ class PaperworkController extends Controller
 
     public function downloadFiles(Request $request)
     {
-        // Check if the user is logged in or authenticated (you may need to customize this)
+        // Check if the user is logged in or authenticated 
         if (auth()->check()) {
             // Define the file paths and their original names
             $filePaths = [

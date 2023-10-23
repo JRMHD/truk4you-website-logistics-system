@@ -1,27 +1,26 @@
 <?php
 
+use App\Http\Controllers\PaperworkController;
 use App\Http\Controllers\EmployeeApplicationController;
 use App\Http\Controllers\FormDataController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuoteController;
 
-// Route::post('/submit', 'FormDataController@store')->name('submit');
+
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
 Route::get('/quote', 'FormDataController@create')->name('quote');
 
 
-// Route::post('/submit-employee-application', 'EmployeeApplicationController@submitForm')->name('employee-application.submit');
-// Route::post('/employee-application-form', 'EmployeeApplicationController@submitForm');
+
 Route::post('/submit-employee-application', [EmployeeApplicationController::class, 'submitForm'])->name('employee-application.submit');
 Route::post('/employee-application-form', [EmployeeApplicationController::class, 'submitForm'])->name('submitForm');
 
-// Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork');
+
 Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
 
-Route::get('/quote-form', 'QuoteController@showForm');
-Route::post('/submit-quote', 'QuoteController@store')->name('quote.store');
 
-
-
+Route::get('/quote-form', 'QuoteController@showForm')->name('quote-form');
+Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.store');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
