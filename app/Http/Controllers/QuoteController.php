@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Quote; // Import the Quote model
+use App\Models\Quote; // Import the Quote model
+// use App\Quote; // Import the Quote model
+
+
 
 class QuoteController extends Controller
 {

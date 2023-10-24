@@ -1,5 +1,5 @@
 <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
-    <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="/favicon.png">
 @extends('layouts.app')
 
 @section('content')

@@ -5,6 +5,7 @@ use App\Http\Controllers\EmployeeApplicationController;
 use App\Http\Controllers\FormDataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
@@ -16,11 +17,14 @@ Route::post('/submit-employee-application', [EmployeeApplicationController::clas
 Route::post('/employee-application-form', [EmployeeApplicationController::class, 'submitForm'])->name('submitForm');
 
 
-Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
+// Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
+Route::get('/download/paperwork', [PaperworkController::class, 'downloadFiles'])->name('download.paperwork')->middleware('auth');
 
 
 Route::get('/quote-form', 'QuoteController@showForm')->name('quote-form');
 Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.store');
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +36,9 @@ Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.sto
 |
 */
 
-Route::get('/', function () {
+Route::get('/success', function () {
+    return view('success');
+});Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/about', function () {

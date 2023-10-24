@@ -21,8 +21,8 @@ class PaperworkController extends Controller
         if (auth()->check()) {
             // Define the file paths and their original names
             $filePaths = [
-                'file1' => 'storage/app/public/aug 2023 w9.pdf',
-                'file2' => 'storage/app/public/Operating Authority MC number.pdf',
+                'file1' => 'public\documents\aug 2023 w9.pdf',
+                'file2' => 'public\documents\Operating Authority MC number.pdf',
             ];
 
             // Zip the files into a single archive
