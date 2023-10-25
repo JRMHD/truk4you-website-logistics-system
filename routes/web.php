@@ -6,6 +6,7 @@ use App\Http\Controllers\FormDataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ContactController;
 
 
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
@@ -24,7 +25,8 @@ Route::get('/download/paperwork', [PaperworkController::class, 'downloadFiles'])
 Route::get('/quote-form', 'QuoteController@showForm')->name('quote-form');
 Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.store');
 
-
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
