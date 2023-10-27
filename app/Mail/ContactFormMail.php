@@ -36,13 +36,17 @@ class ContactFormMail extends Mailable
     // }
     public function build()
 {
+    $data = $this->data;
+
+//    dd($data);
     return $this->view('contact-form-email')
-        ->with([
-            'name' => $this->data['name'],
-            'email' => $this->data['email'],
-            'subject' => $this->data['subject'],
-            'message' => $this->data['message'],
-        ]);
+        ->with($data);
+        // [
+        //     'name' => $this->data['name'],
+        //     'email' => $this->data['email'],
+        //     'subject' => $this->data['subject'],
+        //     'message' => $this->data['message'],
+        // ]
 }
 
 }

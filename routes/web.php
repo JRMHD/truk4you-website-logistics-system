@@ -27,6 +27,10 @@ Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.sto
 
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.show');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+Route::get('/contact', 'ContactController@showForm')->name('contact.show');
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

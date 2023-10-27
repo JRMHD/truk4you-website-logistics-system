@@ -21,10 +21,12 @@ class ContactController extends Controller
             'subject' => 'required',
             'message' => 'required',
         ]);
-
+        $Data=$request->all();
         Mail::to('letsroll@truk4you.com')
-            ->send(new ContactFormMail($validatedData));
+        // ->send(new ContactFormMail($validatedData));
+            ->send(new ContactFormMail($Data));
 
         return redirect('/contact')->with('success', 'Your message has been sent successfully!');
     }
+    
 }
