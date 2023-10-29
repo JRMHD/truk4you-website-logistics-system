@@ -18,9 +18,13 @@ Route::post('/submit-employee-application', [EmployeeApplicationController::clas
 Route::post('/employee-application-form', [EmployeeApplicationController::class, 'submitForm'])->name('submitForm');
 
 
-// Route::get('/download/paperwork', 'PaperworkController@download')->name('download.paperwork')->middleware('auth');
+
 Route::get('/download/paperwork', [PaperworkController::class, 'downloadFiles'])->name('download.paperwork')->middleware('auth');
 
+
+
+Route::get('/download-file1', [PaperworkController::class, 'downloadFile1'])->name('download.file1')->middleware('auth');
+Route::get('/download-file2', [PaperworkController::class, 'downloadFile2'])->name('download.file2')->middleware('auth');
 
 Route::get('/quote-form', 'QuoteController@showForm')->name('quote-form');
 Route::post('/submit-quote', [QuoteController::class, 'store'])->name('quote.store');

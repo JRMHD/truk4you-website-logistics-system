@@ -23,10 +23,12 @@
         </div>
     </div>
     <div class="container text-center mt-3">
-        @auth
-            <a href="{{ route('download.paperwork') }}" class="btn btn-primary">Download Paperwork</a>
-        @else
-            <p>Please <a href="{{ route('login') }}">log in</a> to download paperwork.</p>
-        @endauth
-    </div>
+    @auth
+        <a href="{{ route('download.file1') }}" class="btn btn-primary">Download W9</a>
+        <a href="{{ route('download.file2') }}" class="btn btn-primary">Download Operating Authority MC Number</a>
+    @else
+        <p>Please <a href="{{ route('login') }}">log in</a> to download paperwork.</p>
+    @endauth
+</div>
+
 @endsection

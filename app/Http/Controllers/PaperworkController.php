@@ -5,37 +5,41 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\File;
 
 class PaperworkController extends Controller
-
-
 {
-    public function __construct()
+    public function downloadFile1()
     {
-        $this->middleware('auth');
+        $pdfFile = storage_path('documents/aug 2023 w9.pdf');
+        $fileName = 'aug 2023 w9.pdf';
+
+        if (File::exists($pdfFile)) {
+            $headers = [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="' . $fileName . '"',
+            ];
+
+            return Response::make(File::get($pdfFile), 200, $headers);
+        } else {
+            return redirect()->back()->with('error', 'File not found.');
+        }
     }
 
-    public function downloadFiles(Request $request)
+    public function downloadFile2()
     {
-        $zip_file = 'paperwork.zip';
-        $zip = new \ZipArchive();
-        $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
+        $pdfFile = storage_path('documents/Operating Authority MC number.pdf');
+        $fileName = 'Operating_Authority_MC_number.pdf';
 
-        $path = storage_path('documents');
-// dd($path);
-        $files = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
-        foreach ($files as $name => $file) {
-            // We're skipping all subfolders
-            if (!$file->isDir()) {
-                $filePath     = $file->getRealPath();
+        if (File::exists($pdfFile)) {
+            $headers = [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="' . $fileName . '"',
+            ];
 
-                // extracting filename with substr/strlen
-                $relativePath = 'paperwork/' . substr($filePath, strlen($path) + 1);
-                $zip->addFile($filePath, $relativePath);
-            }
+            return Response::make(File::get($pdfFile), 200, $headers);
+        } else {
+            return redirect()->back()->with('error', 'File not found.');
         }
-        $zip->close();
-        return response()->download($zip_file);
-       
     }
 }
