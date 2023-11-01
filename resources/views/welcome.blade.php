@@ -179,7 +179,81 @@
         </div>
         <!-- Carousel End -->
 
+        <!-- Quote Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
+                        <h1 class="mb-5">Request A Free Quote!</h1>
+                        <p class="mb-5">Need a freight quote or have questions? Reach out to us, and we'll provide
+                            you with a quick and hassle-free quote.</p>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                            <div class="ps-4">
+                                <h6>Contact us for inquiries!</h6>
+                                <h3 class="text-primary m-0">+1 303-944-7371</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+                            <form method="POST" action="{{ route('quote.store') }}">
+                                @csrf <!-- CSRF token -->
 
+                                <div class="row g-3">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="name" class="form-control border-0"
+                                            placeholder="Your Name" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" name="email" class="form-control border-0"
+                                            placeholder="Your Email" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="mobile" class="form-control border-0"
+                                            placeholder="Your Mobile" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <select name="equipment" class="form-select border-0" style="height: 55px;">
+                                            <option selected>Select Equipment Needed</option>
+                                            <option value="53 Foot Dry Van">53" Dry Van</option>
+                                            <option value="Power Only">Power Only</option>
+                                            <option value="Flatbed">Flatbed</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" name="originatingCityState"
+                                            class="form-control border-0" placeholder="Originating City State"
+                                            style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" name="destinationCityState"
+                                            class="form-control border-0" placeholder="Destination City State"
+                                            style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="shipByDate" class="form-label">Ship By Date:</label>
+                                        <input type="date" name="shipByDate" class="form-control border-0"
+                                            style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="notes" class="form-control border-0" placeholder="Additional Notes"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Quote End -->
         <!-- About Start -->
         <div class="container-fluid overflow-hidden py-5 px-lg-0">
             <div class="container about py-5 px-lg-0">
@@ -218,61 +292,7 @@
         <!-- About End -->
 
 
-       <!-- Quote Start -->
-<div class="container-xxl py-5">
-    <div class="container py-5">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase mb-3">Get A Quote</h6>
-                <h1 class="mb-5">Request A Free Quote!</h1>
-                <p class="mb-5">Need a freight quote or have questions? Reach out to us, and we'll provide
-                    you with a quick and hassle-free quote.</p>
-                <div class="d-flex align-items-center">
-                    <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
-                    <div class="ps-4">
-                        <h6>Contact us for inquiries!</h6>
-                        <h3 class="text-primary m-0">+1 303-944-7371</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-                    <form method="POST" action="{{ route('quote.store') }}">
-                        @csrf <!-- CSRF token -->
 
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="mobile" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select name="equipment" class="form-select border-0" style="height: 55px;">
-                                    <option selected>Select Equipment Needed</option>
-                                    <option value="1">53" Dry Van</option>
-                                    <option value="2">Power Only</option>
-                                    <option value="3">Flatbed</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12">
-                                <textarea name="notes" class="form-control border-0" placeholder="Additional Notes"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Quote End -->
 
 
 

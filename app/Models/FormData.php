@@ -7,5 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormData extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'pickupLocation',
+        'pickupDateTime',
+        'deliveryLocation',
+        'deliveryDateTime',
+        'equipmentType',
+        'loadType',
+        'loadDimensions',
+        'commodityDescription',
+        'contactName',
+        'contactPhone',
+        'contactEmail',
+        'loadDocPath',
+    ];
+
+    // ... rest of your model code
 }
+

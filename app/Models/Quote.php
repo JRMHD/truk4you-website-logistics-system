@@ -15,6 +15,9 @@ class Quote extends Model
         'email',
         'mobile',
         'equipment',
+        'originating_city_state',
+        'destination_city_state',
+        'shipByDate',
         'notes',
     ];
 
