@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
 
     <!-- Or for PNG format -->
@@ -82,11 +83,6 @@
                 <a href="https://safer.fmcsa.dot.gov/CompanySnapshot.aspx"
                     style="font-size: 0.8em; margin-left: 10px;">DOT: 2789415</a>
             </div>
-
-
-
-
-
 
         </div>
     </nav>
