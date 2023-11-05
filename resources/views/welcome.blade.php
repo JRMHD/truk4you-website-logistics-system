@@ -175,7 +175,6 @@
         </div>
         <!-- Carousel End -->
 
-        <!-- Quote Start -->
         <div class="container-xxl py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
@@ -211,24 +210,25 @@
                                             placeholder="Your Mobile" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <select name="equipment" class="form-select border-0" style="height: 55px;">
-                                            <option selected>Select Equipment Needed</option>
+                                        <select name="equipment" id="equipment" class="form-select border-0"
+                                            style="height: 55px;">
+                                            <option value="" selected>Select Equipment Needed</option>
                                             <option value="53 Foot Dry Van">53" Dry Van</option>
                                             <option value="Power Only">Power Only</option>
                                             <option value="Flatbed">Flatbed</option>
                                         </select>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12" id="originDestination" style="display: none;">
                                         <input type="text" name="originatingCityState"
                                             class="form-control border-0" placeholder="Originating City State"
                                             style="height: 55px;">
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12" id="shipDate" style="display: none;">
                                         <input type="text" name="destinationCityState"
                                             class="form-control border-0" placeholder="Destination City State"
                                             style="height: 55px;">
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12" id="shipByDate" style="display: none;">
                                         <label for="shipByDate" class="form-label">Ship By Date:</label>
                                         <input type="date" name="shipByDate" class="form-control border-0"
                                             style="height: 55px;">
@@ -241,15 +241,31 @@
                                     </div>
                                 </div>
                             </form>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Quote End -->
+
+        <script>
+            const equipmentSelect = document.getElementById('equipment');
+            const originDestination = document.getElementById('originDestination');
+            const shipDate = document.getElementById('shipDate');
+            const shipByDate = document.getElementById('shipByDate');
+
+            equipmentSelect.addEventListener('change', function() {
+                if (equipmentSelect.value !== "") {
+                    originDestination.style.display = 'block';
+                    shipDate.style.display = 'block';
+                    shipByDate.style.display = 'block';
+                } else {
+                    originDestination.style.display = 'none';
+                    shipDate.style.display = 'none';
+                    shipByDate.style.display = 'none';
+                }
+            });
+        </script>
+
         <!-- About Start -->
         <div class="container-fluid overflow-hidden py-5 px-lg-0">
             <div class="container about py-5 px-lg-0">
