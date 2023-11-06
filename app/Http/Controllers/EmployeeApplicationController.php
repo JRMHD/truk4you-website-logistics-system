@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\EmployeeApplication; // Replace with your model name
+use App\Models\EmployeeApplication;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\EmployeeApplicationMail;
 
 class EmployeeApplicationController extends Controller
 {
@@ -27,29 +29,28 @@ class EmployeeApplicationController extends Controller
         $employeeApplication->license = $request->input('license');
         $employeeApplication->expiration = $request->input('expiration');
         $employeeApplication->endorsements = $request->input('endorsements');
-
         $employeeApplication->backgroundCheck = $request->input('backgroundCheck');
         $employeeApplication->workSchedule = $request->input('workSchedule');
         $employeeApplication->address = $request->input('address');
         $employeeApplication->phone = $request->input('phone');
         $employeeApplication->email = $request->input('email');
         $employeeApplication->experience = $request->input('experience');
-        // $employeeApplication->resume = $request->input('resume');
-        // $employeeApplication->form-check = $request->input('form-check');
-
-        
-        
         // Add more fields...
 
         // If a file was uploaded, store it and set the file path in the model
         if ($request->hasFile('resume')) {
             $file = $request->file('resume');
             $path = $file->store('uploads', 'public');
-            $employeeApplication->resumePath = $path; // Assuming you have a 'resumePath' column in your model
+            $employeeApplication->resume = $path; // Assuming you have a 'resume' column in your model
         }
 
         // Save the data in the database
         $employeeApplication->save();
+
+        // Send an email with the submitted data
+        // Mail::to('letsroll@truk4you.com')->send(new EmployeeApplicationMail($employeeApplication));
+        Mail::to('letsroll@truk4you.com')->send(new EmployeeApplicationMail($request->all()));
+
 
         return redirect()->route('employeeApplication')->with('success', 'Application Submitted Successfully');
     }
