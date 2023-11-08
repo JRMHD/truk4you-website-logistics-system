@@ -7,6 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Content;
+use PhpParser\Node\Expr\Cast\String_;
 
 class EmployeeApplicationMail extends Mailable
 {
@@ -25,16 +26,29 @@ class EmployeeApplicationMail extends Mailable
         $this->data = $data;
     }
 
+    // public function content()
+    // {
+    //     return new Content(
+    //         view: 'emails.employee-application',
+    //         data: $this->data
+    //     );
+    // }
+    //  I THINK ITS OKAY NOW!
     public function content()
     {
         return new Content(
             view: 'emails.employee-application',
-            data: $this->data
+            // $this->data = $data;
         );
     }
 
+    public function setData($data)
+    {
+        $this->data = $data;
+        return $this;
+    }
 
-
+    // WHAT IS THE
 
     /**
      * Build the message.
