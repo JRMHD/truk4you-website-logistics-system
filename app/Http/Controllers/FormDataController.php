@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FormData; // Import the FormData model
+use Illuminate\Support\Facades\Mail;
+use App\Mail\FreightQuoteMail;
 
 class FormDataController extends Controller
 {
@@ -54,13 +56,13 @@ class FormDataController extends Controller
 
         // Save the data in the database
         $formData->save();
-        return redirect()->route('quote')->with('success', 'Quote Request Submitted Successfully');
+
+        // Send an email with the submitted data (excluding the file)
+        $emailData = $formData->toArray();
+        unset($emailData['loadDocPath']); // Remove the loadDocPath from the email data
+        Mail::to('letsroll@truk4you.com')->send(new FreightQuoteMail($emailData));
 
         // Redirect to a thank you page or show a success message
-        return redirect()->route('quote'); // Replace 'route' with the actual route or view name
-        // ... (Your existing code for saving the form data)
-
-        // Set a success message in the session
-        
+        return redirect()->route('quote')->with('success', 'Quote Request Submitted Successfully');
     }
 }

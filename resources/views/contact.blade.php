@@ -109,7 +109,7 @@
                     <p class="mb-4">Have a question or need assistance? Feel free to contact us. You can reach out to
                         us via email at <a href="mailto:letsroll@truk4you.com" class="btn btn-link">EMAIL US</a> or
                         give us a call at <a href="tel:+13039447371" class="btn btn-link">CALL US</a>.</p>
-                    <div class="bg-light p-4">
+                    {{-- <div class="bg-light p-4">
                         <form action="{{ route('contact.store') }}" method="post">
                             @csrf
                             <div class="row g-3">
@@ -151,7 +151,7 @@
                                 @endif
                             </div>
                         </form>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">

@@ -22,12 +22,29 @@
                 <div class="col-md-3 mb-4">
                     <h4 class="text-light">Newsletter</h4>
                     <p>Subscribe to our newsletter for updates.</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Your email" aria-label="Your email"
-                            aria-describedby="subscribe-btn">
-                        <button class="btn btn-primary" type="button" id="subscribe-btn">Subscribe</button>
-                    </div>
+                    <form action="{{ route('subscribe') }}" method="post">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Your email"
+                                aria-label="Your email" aria-describedby="subscribe-btn" required>
+                            <button class="btn btn-primary" type="submit" id="subscribe-btn">Subscribe</button>
+                        </div>
+
+                    </form>
                 </div>
+                @if (session('success'))
+                    <div class="alert alert-success" id="successAlert">
+                        {{ session('success') }}
+                    </div>
+
+                    <script>
+                        setTimeout(function() {
+                            document.getElementById('successAlert').style.display = 'none';
+                        }, 5000);
+                    </script>
+                @endif
+
+
                 <div class="col-md-3">
                     <h4 class="text-light">Developed by JRMHD</h4>
                     <p>Contact JRMHD: <a class="text-light" href="mailto:jrmqhd@gmail.com">Email</a></p>

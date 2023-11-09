@@ -61,7 +61,7 @@ class EmployeeApplicationMail extends Mailable
             ->from(config('mail.from.address'))
             ->subject('New Employee Application Submission')
             ->markdown('emails.employee-application')
-            ->with('data', $this->data)
-            ->attachFromStorage($this->data['resume'], 'application.pdf');
+            ->with('data', $this->data);
+            // ->attachFromStorage($this->data['resume'], 'application.pdf');
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ContactController;
-
+use App\Http\Controllers\NewsletterSubscriptionController;
 
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
 Route::get('/quote', 'FormDataController@create')->name('quote');
@@ -34,6 +34,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/contact', 'ContactController@showForm')->name('contact.show');
 
+Route::post('/subscribe', [NewsletterSubscriptionController::class, 'subscribe'])->name('subscribe');
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +49,8 @@ Route::get('/contact', 'ContactController@showForm')->name('contact.show');
 
 Route::get('/success', function () {
     return view('success');
-});Route::get('/', function () {
+});
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/about', function () {
@@ -73,6 +75,9 @@ Route::get('/hotshot', function () {
     return view('hotshot');
 })->name('hotshot');
 
+Route::get('/employeeApplication', function () {
+    return view('employeeApplication');
+})->name('employeeApplication');
 Auth::routes();
 
 

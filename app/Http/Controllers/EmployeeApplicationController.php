@@ -9,16 +9,11 @@ use App\Mail\EmployeeApplicationMail;
 
 class EmployeeApplicationController extends Controller
 {
-    public function showForm()
-    {
-        return view('employeeApplication'); // Use the correct blade view
-    }
-
     public function submitForm(Request $request)
     {
         // Validate the form data
         $request->validate([
-            // Add validation rules here
+            // Add your validation rules here
         ]);
 
         // Create a new instance of the EmployeeApplication model
@@ -37,20 +32,12 @@ class EmployeeApplicationController extends Controller
         $employeeApplication->experience = $request->input('experience');
         // Add more fields...
 
-        // If a file was uploaded, store it and set the file path in the model
-        if ($request->hasFile('resume')) {
-            $file = $request->file('resume');
-            $path = $file->store('uploads', 'public');
-            $employeeApplication->resume = $path; // Assuming you have a 'resume' column in your model
-        }
-
         // Save the data in the database
         $employeeApplication->save();
 
-        // Send an email with the submitted data
-        // Mail::to('letsroll@truk4you.com')->send(new EmployeeApplicationMail($employeeApplication));
-        Mail::to('letsroll@truk4you.com')->send(new EmployeeApplicationMail($request->all()));
-
+        // Send an email with the submitted data (excluding the file)
+        $data = $request->except(['_token', 'resume']);
+        Mail::to('letsroll@truk4you.com')->send(new EmployeeApplicationMail($data));
 
         return redirect()->route('employeeApplication')->with('success', 'Application Submitted Successfully');
     }
