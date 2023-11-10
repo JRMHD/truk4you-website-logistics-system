@@ -24,11 +24,11 @@ class QuoteController extends Controller
         'name' => 'required|string|max:255',
         'email' => 'required|email|max:255',
         'mobile' => 'required|string|max:20',
-        'equipment' => 'required',
-        'originatingCityState' => 'required|string', // New field
-        'destinationCityState' => 'required|string', // New field
-        'shipByDate' => 'required|string', // New field
-        'notes' => 'nullable|string',
+        'equipment' => 'nullable',
+        'originatingCityState' => 'nullable|string', // New field
+        'destinationCityState' => 'nullable|string', // New field
+        'shipByDate' => 'nullable|string', // New field
+        'notes' => 'required|string',
     ]);
 
     Quote::create($validatedData);
