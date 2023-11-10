@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
 
     <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
 
