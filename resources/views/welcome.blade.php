@@ -213,6 +213,14 @@
                                             placeholder="Your Mobile" style="height: 55px;">
                                     </div>
                                     <div class="col-12 col-sm-6">
+                                        <input type="text" name="phoneExt" class="form-control border-0"
+                                            placeholder="Phone Ext" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="company" class="form-control border-0"
+                                            placeholder="Company" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
                                         <select name="equipment" id="equipment" class="form-select border-0"
                                             style="height: 55px;">
                                             <option value="" selected>Select Equipment Needed</option>
@@ -244,6 +252,7 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>

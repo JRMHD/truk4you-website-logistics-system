@@ -24,6 +24,8 @@ class QuoteController extends Controller
         'name' => 'required|string|max:255',
         'email' => 'required|email|max:255',
         'mobile' => 'required|string|max:20',
+        'phoneExt' => 'nullable|string',
+        'company' => 'nullable|string',
         'equipment' => 'nullable',
         'originatingCityState' => 'nullable|string', // New field
         'destinationCityState' => 'nullable|string', // New field
