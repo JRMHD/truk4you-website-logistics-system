@@ -201,6 +201,10 @@
 
                                 <div class="row g-3">
                                     <div class="col-12 col-sm-6">
+                                        <input type="text" name="company" class="form-control border-0"
+                                            placeholder="Company" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
                                         <input type="text" name="name" class="form-control border-0"
                                             placeholder="Your Name" style="height: 55px;">
                                     </div>
@@ -216,10 +220,7 @@
                                         <input type="text" name="phoneExt" class="form-control border-0"
                                             placeholder="Phone Ext" style="height: 55px;">
                                     </div>
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" name="company" class="form-control border-0"
-                                            placeholder="Company" style="height: 55px;">
-                                    </div>
+
                                     <div class="col-12 col-sm-6">
                                         <select name="equipment" id="equipment" class="form-select border-0"
                                             style="height: 55px;">
