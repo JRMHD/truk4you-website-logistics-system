@@ -8,6 +8,7 @@ use App\Http\Controllers\QuoteController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterSubscriptionController;
+use App\Http\Controllers\EmailAlertController;
 
 Route::post('/submit', [FormDataController::class, 'store'])->name('submit');
 Route::get('/quote', 'FormDataController@create')->name('quote');
@@ -36,6 +37,9 @@ Route::get('/contact', 'ContactController@showForm')->name('contact.show');
 
 Route::post('/subscribe', [NewsletterSubscriptionController::class, 'subscribe'])->name('subscribe');
 
+Route::get('/owner/email-alert-form', [EmailAlertController::class, 'showOwnerForm'])->name('email-alert.form');
+Route::post('/owner/email-alert', [EmailAlertController::class, 'store'])->name('email-alert.store');
+Route::put('/owner/email-alert-toggle/{id}', [EmailAlertController::class, 'toggleStatus'])->name('email-alert.toggle');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
