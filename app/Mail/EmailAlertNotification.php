@@ -2,8 +2,6 @@
 
 namespace App\Mail;
 
-// app/Mail/EmailAlertNotification.php
-
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -11,11 +9,13 @@ class EmailAlertNotification extends Mailable
 {
     use SerializesModels;
 
-    public $message;
+    public $emailMessage;
+    public $companyLink;
 
-    public function __construct($message)
+    public function __construct($data)
     {
-        $this->message = $message;
+        $this->emailMessage = $data['message'];
+        $this->companyLink = 'https://truk4you.com'; // Add the link to your company here
     }
 
     public function build()

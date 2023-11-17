@@ -21,7 +21,7 @@ class EmailAlertController extends Controller
         $validator = $request->validate([
             'recipient' => 'required|email',
             'message' => 'required|string',
-            'frequency' => 'required|in:4,8,24',
+            'frequency' => 'required|in:15,30,45,60,120,240,480',
             'is_active' => 'required|boolean',
         ]);
 
@@ -35,7 +35,7 @@ class EmailAlertController extends Controller
         // Send the first email alert immediately
         $this->sendImmediateEmailAlert($emailAlert);
 
-        return redirect()->back()->with('success', 'Email alert set up successfully.');
+        return redirect()->back()->with('success', 'Alert sent and scheduled successfully.');
     }
 
     protected function sendImmediateEmailAlert(EmailAlert $emailAlert)
@@ -56,10 +56,8 @@ class EmailAlertController extends Controller
 
     protected function sendEmailAlert($recipient, $message)
     {
-        // Ensure $message is a string
-        $email = new EmailAlertNotification(['message' => $message]);
-
         // You can customize the email notification as per your design
-        Mail::to($recipient)->send($email);
+        $data = ['message' => $message];
+        Mail::to($recipient)->send(new EmailAlertNotification($data));
     }
 }
