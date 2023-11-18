@@ -2,10 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="/img/T4U.ico">
-
-    <!-- Or for PNG format -->
-    <link rel="icon" type="image/png" href="/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule Up Email Alert</title>
@@ -141,21 +137,22 @@
                         </div>
                     </div>
 
+                    <!-- Update the options for alert frequency -->
                     <div class="mb-3 row">
-                        <label for="frequency" class="col-md-4 col-form-label text-md-end">Alert Frequency
-                            (minutes)</label>
+                        <label for="frequency" class="col-md-4 col-form-label text-md-end">Alert Frequency</label>
                         <div class="col-md-6">
                             <select id="frequency" class="form-select" name="frequency" required>
-                                <option value="15">Every 15 minutes</option>
-                                <option value="30">Every 30 minutes</option>
-                                <option value="45">Every 45 minutes</option>
+                                <option value="1">Every 1 hour</option>
                                 <option value="2">Every 2 hours</option>
                                 <option value="4">Every 4 hours</option>
                                 <option value="8">Every 8 hours</option>
                                 <option value="24">Every 24 hours</option>
+                                <option value="48">Every 48 hours</option>
+                                <!-- Add more options as needed -->
                             </select>
                         </div>
                     </div>
+
 
                     <div class="mb-3 row">
                         <label for="is_active" class="col-md-4 col-form-label text-md-end">Is Active?</label>

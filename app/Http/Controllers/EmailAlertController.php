@@ -21,7 +21,7 @@ class EmailAlertController extends Controller
         $validator = $request->validate([
             'recipient' => 'required|email',
             'message' => 'required|string',
-            'frequency' => 'required|in:15,30,45,60,120,240,480',
+            'frequency' => 'required|in:1,2,4,8,24,48',
             'is_active' => 'required|boolean',
         ]);
 
