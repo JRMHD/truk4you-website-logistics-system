@@ -129,7 +129,13 @@
                             <input id="recipient" type="email" class="form-control" name="recipient" required>
                         </div>
                     </div>
-
+                    <div class="mb-3 row">
+                        <label for="reminderMessage" class="col-md-4 col-form-label text-md-end">Custom Header</label>
+                        <div class="col-md-6">
+                            <input id="reminderMessage" type="text" class="form-control" name="reminderMessage"
+                                required>
+                        </div>
+                    </div>
                     <div class="mb-3 row">
                         <label for="message" class="col-md-4 col-form-label text-md-end">Alert Message</label>
                         <div class="col-md-6">

@@ -11,11 +11,13 @@ class EmailAlertNotification extends Mailable
 
     public $emailMessage;
     public $companyLink;
+    public $reminderMessage; // Add this line
 
     public function __construct($data)
     {
         $this->emailMessage = $data['message'];
-        $this->companyLink = 'https://truk4you.com'; // Add the link to your company here
+        $this->companyLink = 'https://truk4you.com';
+        $this->reminderMessage = $data['reminderMessage']; // Add this line
     }
 
     public function build()
