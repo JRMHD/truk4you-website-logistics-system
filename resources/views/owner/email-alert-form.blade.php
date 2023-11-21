@@ -170,19 +170,7 @@
                         </div>
                     </div>
 
-                    <!-- Additional form fields -->
-                    {{-- 
-                    <div class="mb-3 row">
-                        <label for="additional_field" class="col-md-4 col-form-label text-md-end">Additional
-                            Field</label>
-                        <div class="col-md-6">
-                            <input id="additional_field" type="text" class="form-control" name="additional_field">
-                        </div>
-                    </div> --}}
-
-                    <!-- Add more fields as needed -->
-
-                    <!-- End of additional fields -->
+                    
 
                     <div class="row mb-0">
                         <div class="col-md-6 offset-md-4">

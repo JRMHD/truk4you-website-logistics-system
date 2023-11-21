@@ -15,9 +15,9 @@ class Kernel extends ConsoleKernel
      * @return void
      */
     protected function schedule(Schedule $schedule)
-{
-    $schedule->command(SendEmailAlerts::class)->everyMinute();
-}
+    {
+        $schedule->command('email-alerts:send')->everyMinute();
+    }
 
     /**
      * Register the commands for the application.
